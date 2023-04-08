@@ -3,9 +3,16 @@ using System.Collections.Generic;
 using System;
 using UnityEngine;
 using UnityEditor;
+using UnityEngine.SceneManagement;
 
 public class BasicFeatures : MonoBehaviour
 {
+    public void SceneLoader(string scene)
+    {
+        
+        SceneManager.LoadScene(scene);
+    }
+
     public void doExitGame(){
         Application.Quit();
         Debug.Log("Exit 0");
