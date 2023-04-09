@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2742765407132051490}
   - component: {fileID: 8352317727733912202}
   m_Layer: 5
-  m_Name: BackgroundImages
+  m_Name: BackgroundImagesDarkWithTree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -68,7 +68,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5439670470036966774}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
@@ -91,7 +91,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5439670470036966774}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
   m_Name: 
@@ -196,6 +196,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9016002176180558364, guid: 4a49206efbf794d94a8f73bf641448fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: bee4e8a7eaf8ab841b825bbaba125956, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a49206efbf794d94a8f73bf641448fb, type: 3}
 --- !u!1 &3910880258253131263 stripped
@@ -203,7 +207,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2185259925248014773, guid: 4a49206efbf794d94a8f73bf641448fb, type: 3}
   m_PrefabInstance: {fileID: 2888397861522371658}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &8693647281451744347
+--- !u!114 &2553818597482161751
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

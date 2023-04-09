@@ -208,8 +208,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1099112548}
-        m_TargetAssemblyTypeName: BasicFeatures, Assembly-CSharp
-        m_MethodName: doExitGame
+        m_TargetAssemblyTypeName: doExitGame, Assembly-CSharp
+        m_MethodName: DoExitGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3506,7 +3506,7 @@ GameObject:
   - component: {fileID: 1099112549}
   - component: {fileID: 1099112548}
   m_Layer: 0
-  m_Name: BasicFeatures
+  m_Name: doExitGame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3521,7 +3521,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1099112547}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1079c6c88c7bc42d4980e7da1b38eb9c, type: 3}
+  m_Script: {fileID: 11500000, guid: 38980cd34daea9d4899567d530b52a9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &1099112549
@@ -4861,6 +4861,50 @@ RectTransform:
   m_AnchoredPosition: {x: 0.0025939941, y: 289.5754}
   m_SizeDelta: {x: 1017.432, y: 281.4635}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1675291582
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1675291584}
+  - component: {fileID: 1675291583}
+  m_Layer: 0
+  m_Name: SceneLoader
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1675291583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1675291582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e993c7400c66e014194d76d65c284172, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1675291584
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1675291582}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 540.4475, y: 353.1523, z: 89.642365}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1694592764
 GameObject:
   m_ObjectHideFlags: 0
@@ -5215,9 +5259,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1099112548}
-        m_TargetAssemblyTypeName: BasicFeatures, Assembly-CSharp
-        m_MethodName: SceneLoader
+      - m_Target: {fileID: 1675291583}
+        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+        m_MethodName: sceneLoader
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
