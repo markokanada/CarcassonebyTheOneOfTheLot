@@ -22,6 +22,7 @@ public class CreateGameField : MonoBehaviour
         int height = 10;
         UnityEngine.Object prefab3 = AssetDatabase.LoadAssetAtPath("Assets/Parent.prefab", typeof(GameObject));
         GameObject childOb = Instantiate(prefab3, Vector3.zero, Quaternion.identity) as GameObject; ;//new GameObject("name");
+        Vector2 selectedPos = new Vector2();
 
         for (int i = 0; i < height; i++)
         {
@@ -48,6 +49,11 @@ public class CreateGameField : MonoBehaviour
                 }
 
                 UnityEngine.Object prefab2 = AssetDatabase.LoadAssetAtPath("Assets/DefaultBorder.prefab", typeof(GameObject));
+
+                if (i == (height - 2) / 4 && j==3)
+                {
+                    
+                }
                 
                 GameObject clone = Instantiate(prefab, Vector3.zero, Quaternion.identity) as GameObject;
                 GameObject cloneLine = Instantiate(prefab2, Vector3.zero, Quaternion.identity) as GameObject;
@@ -55,6 +61,7 @@ public class CreateGameField : MonoBehaviour
                 float difference_x = clone.transform.position.x;
                 float difference_y = clone.transform.position.y;
                 clone = clone.transform.GetChild(0).gameObject;
+                cloneLine.name = $"cloneLine{i}.{j}";
                 cloneLine = cloneLine.transform.GetChild(0).gameObject;
                 clone.transform.localScale = new Vector3(((GetScreenSize().x / (float)7) / (float)100), ((GetScreenSize().x / (float)7) / (float)100), ((GetScreenSize().x / (float)7) / (float)100));
                 cloneLine.transform.localScale = new Vector3(((GetScreenSize().x / (float)7) / (float)100), ((GetScreenSize().x / (float)7) / (float)100), ((GetScreenSize().x / (float)7) / (float)100));
@@ -115,9 +122,22 @@ public class CreateGameField : MonoBehaviour
                 cloneLine.transform.position = new Vector2((x + difference_x), (y + difference_y));
                 cloneLine = cloneLine.transform.parent.gameObject;
                 cloneLine.gameObject.transform.SetParent(childOb.transform);
+                
+                if (i == (height - 2) / 4 && j == 3)
+                {
+                    selectedPos = new Vector2((x + difference_x), (y + difference_y));
+                }
 
             }
         }
+        UnityEngine.Object prefab4 = AssetDatabase.LoadAssetAtPath("Assets/SelectedBorder.prefab", typeof(GameObject));
+        GameObject cloneLineS = Instantiate(prefab4, Vector3.zero, Quaternion.identity) as GameObject;
+        cloneLineS = cloneLineS.transform.GetChild(0).gameObject;
+        cloneLineS.transform.localScale = new Vector3(((GetScreenSize().x / (float)7) / (float)100), ((GetScreenSize().x / (float)7) / (float)100), ((GetScreenSize().x / (float)7) / (float)100));
+        cloneLineS.transform.position = selectedPos;
+        cloneLineS.name = "selectedLine";
+        cloneLineS = cloneLineS.transform.parent.gameObject;
+        cloneLineS.gameObject.transform.SetParent(childOb.transform);
 
     }
 
